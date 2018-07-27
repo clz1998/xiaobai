@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.ggtop{
+	height: 40px;
+	background: black;
+
+}
+.ggmain{
+	width: 976px;
+	margin: 0 auto;
+	text-align: right;
+	height: 40px;
+	line-height: 40px;
+	color: #a8a8aa;
+	font-size: 12px;
+	
+}
+.nav{
+	/**/
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 44px;
+	background: rgba(0,0,0,0.8);
+}
+.navmain{
+	height: 44px;
+	width: 976px;
+	margin: 0 auto;
+}
+.navmain a{
+	/*inline是没有宽高的，只有inlineblock和block是有宽高*/
+	display: inline-block;
+	width: 105px;
+	height: 40px;
+	line-height: 44px;
+	color: #fff;
+	text-align: center;
+	/*浮动解决高度不一致，以及间距问题*/
+	float: left;
+	/*去掉下划线*/
+	text-decoration: none;
+	font-size: 14px;
+}
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.main{
+				perspective: 1000px;
+				transform-style: preserve-3d;
+			}
+			.mofang{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				transition: all 5s;
+				transform-style: preserve-3d;
+			}
+			.mofang div{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*opacity透明度设置：完全透明是0，完全不透明是1*/
+				/*opacity: 0.9;*/
+				border: 1px solid #ccc;
+				transition: all 5s;
+			}
+			
+			.front{
+				background: url(img/1.png);
+				background-size:  100% 100%;
+				transform: translateZ(100px);
+			}
+			.back{
+				background: url(img/2.jpg) ;
+				background-size:  100% 100%;
+				/*transform: translateZ(-100px);*/
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			.left{
+				background: url(img/3.jpg) ;
+				background-size:  100% 100%;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.right{
+				background: url(img/4.jpg) ;
+				background-size:  100% 100%;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.top{
+				background: url(img/5.jpg) ;
+				background-size:  100% 100%;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.bottom{
+				background: url(img/6.jpg);
+				background-size:  100% 100%;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			
+			.main:hover .mofang{
+				transform: rotate3d(-1,1,0,360deg) scale3d(2,2,2);
+			}
+			
+			/*.main:hover .mofang{
+				transform:scale3d(2,2,2);
+			}*/
+			
+			/*.main:hover .top{
+				transform: rotateX(90deg) translateZ(200px);
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="ggtop">
+			<div class="ggmain">
+				<广告>
+			</div>
+			
+		</div>
+		<div class="nav">
+			<div class="navmain">
+				<a class="logo" href=""></a>
+				<a href="https://www.apple.com/cn/mac/">陈</a>
+				<a href="https://www.apple.com/cn/ipad/">应</a>
+				<a href="https://www.apple.com/cn/iphone/">莽</a>
+				<a href="https://www.apple.com/cn/watch/">哈</a>
+				<a href="https://www.apple.com/cn/music/">哈</a>
+				<a href="https://support.apple.com/zh-cn">哈</a>
+				<a class="search" href=""></a>
+				<a class="buy" href=""></a>
+				
+			</div>
+			
+			
+		</div>
+		<div class="main">
+			<div class="mofang">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+	</body>
+</html>
